@@ -96,7 +96,20 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+## Запуск docker-compose:
 
+Запуск приложения:
+```
+$ docker-compose up OR $ docker-compose up --build
+```
+Команда для выполнения миграций:
+```
+$ docker-compose exec web python manage.py migrate
+```
+Команда для заполнения базы начальными данными:
+```
+$ docker-compose exec web python manage.py loaddata fixtures.json 
+```
 
 ## Над проектом работали:
 
